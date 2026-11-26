@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建全工程顧問有限公司｜結構安全評估・設備耐震簽證</title>
+<meta name="description" content="建全工程顧問有限公司成立於民國99年，提供結構安全評估與補強、鑑定與設計、基礎工程與水土保持、綠能結構、設備耐震與支架簽證等專業服務。">
+<style>
+  :root{
+    --navy:#36557f; --navy-dark:#1c2f4a; --navy-deep:#14233a; --gold:#d6ad3e; --gold-light:#f0d58a; --gold-soft:#faf3df;
+    --ink:#1f2933; --muted:#5b6673; --line:#e3e7ec; --bg-alt:#f4f6f9;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:#fff;line-height:1.75;overflow-x:hidden}
+  a{color:var(--navy)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* ---------- header ---------- */
+  header{position:fixed;inset:0 0 auto 0;z-index:20;transition:background .3s,box-shadow .3s}
+  header.solid{background:rgba(255,255,255,.97);box-shadow:0 2px 18px rgba(20,35,58,.08)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:700;font-size:18px;transition:color .3s}
+  header.solid .brand{color:var(--navy-dark)}
+  .brand img{height:42px;width:auto}
+  nav a{margin-left:26px;text-decoration:none;color:#e8eef6;font-size:15px;position:relative;transition:color .3s}
+  header.solid nav a{color:var(--ink)}
+  nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:width .3s}
+  nav a:hover::after{width:100%}
+
+  /* ---------- hero ---------- */
+  .hero{min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden;
+        background:radial-gradient(ellipse at 75% 40%, #2f4d77 0%, var(--navy-dark) 55%, var(--navy-deep) 100%)}
+  .blueprint{position:absolute;inset:0;opacity:.13;
+        background-image:linear-gradient(#9fb6d6 1px,transparent 1px),linear-gradient(90deg,#9fb6d6 1px,transparent 1px);
+        background-size:48px 48px;animation:drift 40s linear infinite}
+  @keyframes drift{to{background-position:48px 48px}}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;width:100%}
+  .eyebrow{display:inline-block;color:var(--gold-light);border:1px solid rgba(240,213,138,.5);padding:4px 14px;border-radius:999px;font-size:14px;letter-spacing:2px;margin-bottom:22px}
+  .hero h1{font-size:52px;line-height:1.25;margin:0 0 16px;letter-spacing:2px}
+  .hero h1 .hl{color:var(--gold)}
+  .hero .en{color:var(--gold-light);font-style:italic;margin:0 0 22px;opacity:.9}
+  .typer{font-size:20px;color:#dbe5f1;min-height:34px;margin:0 0 34px}
+  .typer b{color:#fff;border-right:2px solid var(--gold);padding-right:4px;animation:caret 1s step-end infinite}
+  @keyframes caret{50%{border-color:transparent}}
+  .btn{display:inline-block;padding:14px 30px;border-radius:999px;text-decoration:none;font-weight:700;margin:0 12px 12px 0;transition:transform .2s,box-shadow .2s,background .2s}
+  .btn:hover{transform:translateY(-3px)}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);box-shadow:0 8px 24px rgba(214,173,62,.35)}
+  .btn-gold:hover{box-shadow:0 12px 30px rgba(214,173,62,.5)}
+  .btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+  .btn-line:hover{background:rgba(255,255,255,.1)}
+  /* rings animation (logo concept) */
+  .rings{position:relative;width:100%;max-width:400px;aspect-ratio:1;margin:0 auto}
+  .rings svg{width:100%;height:100%;overflow:visible}
+  .ring{fill:none;stroke-width:22;stroke-linecap:round;stroke-dasharray:420 600;stroke-dashoffset:1020;animation:draw 2.2s ease-out forwards}
+  .ring.b{stroke:#5b7fae;animation-delay:.2s}
+  .ring.g{stroke:var(--gold);animation-delay:.7s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .spin{transform-origin:200px 200px;animation:spin 30s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .orbit{fill:none;stroke:rgba(255,255,255,.12);stroke-width:1.5;stroke-dasharray:4 10}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:#cfd9e6;font-size:13px;text-align:center;letter-spacing:2px}
+  .scroll-hint span{display:block;width:2px;height:34px;background:linear-gradient(var(--gold),transparent);margin:8px auto 0;animation:drop 1.6s ease-in-out infinite}
+  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0;position:relative}
+  .alt{background:var(--bg-alt)}
+  .kicker{color:var(--gold);font-weight:700;letter-spacing:3px;font-size:13px;margin:0 0 6px}
+  h2{font-size:34px;color:var(--navy-dark);margin:0 0 14px}
+  .bar{width:56px;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:2px;margin-bottom:34px}
+  .lead{font-size:17px;color:var(--muted);max-width:760px}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.show{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .motto{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+  .motto span{background:var(--gold-soft);color:var(--navy-dark);font-weight:700;padding:8px 16px;border-radius:999px;border:1px solid #efdfae}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .stat{background:linear-gradient(145deg,var(--navy),var(--navy-dark));color:#fff;border-radius:16px;padding:26px 22px;position:relative;overflow:hidden}
+  .stat::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border:14px solid rgba(214,173,62,.25);border-radius:50%}
+  .stat .num{font-size:44px;font-weight:800;color:var(--gold-light);line-height:1}
+  .stat .num small{font-size:18px;margin-left:4px;color:#fff}
+  .stat p{margin:8px 0 0;color:#d5dfec;font-size:15px}
+
+  /* services */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:24px}
+  .card{background:#fff;border-radius:16px;padding:30px 28px;box-shadow:0 4px 20px rgba(20,35,58,.06);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--navy),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .45s}
+  .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(20,35,58,.14)}
+  .card:hover::before{transform:scaleX(1)}
+  .icon{width:58px;height:58px;border-radius:14px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:background .35s,transform .35s}
+  .icon svg{width:30px;height:30px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s}
+  .card:hover .icon{background:var(--navy);transform:rotate(-6deg)}
+  .card:hover .icon svg{stroke:var(--gold-light)}
+  .card .no{position:absolute;right:22px;top:16px;font-size:46px;font-weight:800;color:#eef1f5;transition:color .35s}
+  .card:hover .no{color:var(--gold-soft)}
+  .card h3{margin:0 0 10px;color:var(--navy-dark);font-size:20px;position:relative}
+  .card p{margin:0;color:var(--muted);font-size:15px;position:relative}
+  .card.feature{background:linear-gradient(145deg,var(--navy-dark),var(--navy));color:#fff}
+  .card.feature h3{color:#fff}.card.feature p{color:#d5dfec}
+  .card.feature .no{color:rgba(255,255,255,.08)}
+  .card.feature .icon{background:rgba(214,173,62,.18)}
+  .card.feature .icon svg{stroke:var(--gold-light)}
+  .badge{display:inline-block;background:var(--gold);color:var(--navy-deep);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin-bottom:10px}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;counter-reset:s}
+  .steps::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 18px)}
+  .step{text-align:center;position:relative}
+  .step .dot{width:68px;height:68px;margin:0 auto 16px;border-radius:50%;background:#fff;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:var(--navy-dark);box-shadow:0 6px 18px rgba(214,173,62,.25);transition:transform .3s,background .3s}
+  .step:hover .dot{transform:scale(1.1);background:var(--gold);color:#fff}
+  .step h4{margin:0 0 6px;color:var(--navy-dark);font-size:18px}
+  .step p{margin:0;color:var(--muted);font-size:14px}
+
+  /* why */
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .why div{background:#fff;border-radius:14px;padding:24px;border-left:5px solid var(--gold);box-shadow:0 4px 16px rgba(20,35,58,.05);transition:transform .3s}
+  .why div:hover{transform:translateX(6px)}
+  .why b{display:block;color:var(--navy-dark);font-size:18px;margin-bottom:4px}
+  .why span{color:var(--muted);font-size:15px}
+
+  /* team */
+  .person{display:flex;gap:30px;align-items:center;background:#fff;border-radius:20px;padding:34px;max-width:760px;box-shadow:0 8px 30px rgba(20,35,58,.08)}
+  .avatar{flex:0 0 120px;height:120px;border-radius:50%;background:conic-gradient(var(--gold),var(--navy),var(--gold));padding:5px}
+  .avatar div{width:100%;height:100%;border-radius:50%;background:var(--navy-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:700}
+  .person h3{margin:0 0 4px;color:var(--navy-dark);font-size:24px}
+  .person .role{color:var(--gold);font-weight:700;margin:0 0 12px}
+  .person ul{margin:0;padding:0;list-style:none}
+  .person li{color:var(--muted);font-size:15px;padding-left:22px;position:relative;margin:4px 0}
+  .person li::before{content:"";position:absolute;left:0;top:10px;width:10px;height:10px;border-radius:50%;border:2px solid var(--gold)}
+
+  /* CTA + contact */
+  .cta{background:linear-gradient(120deg,var(--navy-deep),var(--navy));color:#fff;text-align:center;padding:80px 0;position:relative;overflow:hidden}
+  .cta::before,.cta::after{content:"";position:absolute;border-radius:50%;border:40px solid rgba(214,173,62,.12)}
+  .cta::before{width:300px;height:300px;left:-90px;top:-90px}
+  .cta::after{width:260px;height:260px;right:-70px;bottom:-110px;border-color:rgba(91,127,174,.25)}
+  .cta h2{color:#fff}
+  .cta p{color:#d5dfec;font-size:18px;margin:0 0 30px}
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:10px}
+  .contact a,.contact div{display:block;background:#fff;border-radius:14px;padding:22px;text-decoration:none;box-shadow:0 4px 16px rgba(20,35,58,.06);transition:transform .3s,box-shadow .3s}
+  .contact a:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(20,35,58,.12)}
+  .contact small{display:block;color:var(--gold);font-weight:700;letter-spacing:2px;font-size:12px}
+  .contact b{font-size:18px;color:var(--navy-dark);word-break:break-all}
+  footer{background:var(--navy-deep);color:#9fb0c5;text-align:center;padding:28px 0;font-size:14px}
+  .totop{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .3s;z-index:30}
+  .totop.show{opacity:1;pointer-events:auto}
+
+  /* cases */
+  .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .case{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(20,35,58,.08);display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+  .case:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(20,35,58,.16)}
+  .case .pic{position:relative;aspect-ratio:1/1;overflow:hidden;background:linear-gradient(145deg,var(--navy),var(--navy-dark))}
+  .case .pic img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .case:hover .pic img{transform:scale(1.08)}
+  .case .yr{position:absolute;left:14px;top:14px;background:rgba(20,35,58,.8);color:var(--gold-light);font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .case .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+  .case h3{margin:0 0 4px;color:var(--navy-dark);font-size:18px}
+  .case .en{color:#8a96a5;font-size:12.5px;font-style:italic;margin:0 0 8px}
+  .case p{margin:0 0 14px;color:var(--muted);font-size:14.5px;flex:1}
+  .case .more{align-self:flex-start;text-decoration:none;font-weight:700;font-size:14px;color:var(--navy);border:1.5px solid var(--navy);padding:6px 14px;border-radius:999px;transition:all .25s}
+  .case .more:hover{background:var(--navy);color:#fff}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:-10px 0 28px}
+  .tabs button{border:1.5px solid var(--line);background:#fff;color:var(--navy-dark);padding:8px 18px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:all .25s}
+  .tabs button.on,.tabs button:hover{background:var(--navy);border-color:var(--navy);color:var(--gold-light)}
+  .case.hide{display:none}
+  .mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .mini div{background:#fff;border-radius:14px;padding:20px;border-top:4px solid var(--gold);box-shadow:0 4px 16px rgba(20,35,58,.06)}
+  .mini b{display:block;color:var(--navy-dark);font-size:17px}
+  .mini em{display:inline-block;font-style:normal;background:var(--gold-soft);color:var(--navy-dark);font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;margin:6px 0}
+  .mini p{margin:0;color:var(--muted);font-size:14.5px}
+  .credit{color:#8a96a5;font-size:13px;margin-top:18px}
+  /* featured project gallery */
+  .feature-proj{background:#fff;border-radius:18px;padding:24px;box-shadow:0 6px 22px rgba(20,35,58,.08);margin-bottom:24px}
+  .feature-proj h3{margin:0 0 4px;color:var(--navy-dark);font-size:20px}
+  .feature-proj .sub{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:190px;gap:10px}
+  .gal a{display:block;border-radius:12px;overflow:hidden;position:relative}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .gal a:hover img{transform:scale(1.07)}
+  .gal span{position:absolute;left:8px;bottom:8px;background:rgba(20,35,58,.75);color:#fff;font-size:12px;padding:2px 8px;border-radius:999px}
+  .lb{position:fixed;inset:0;background:rgba(10,18,30,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .lb.on{display:flex}
+  .lb img{max-width:100%;max-height:90vh;border-radius:10px}
+  @media (max-width:720px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}}
+  /* tsmc */
+  .tsmc{background:linear-gradient(135deg,#101c2e,#1f3556);color:#fff;overflow:hidden}
+  .tsmc h2{color:#fff}.tsmc .kicker{color:var(--gold-light)}
+  .tsmc .lead{color:#c9d5e4}
+  .tstats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+  .tstats div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px;text-align:center}
+  .tstats b{display:block;font-size:44px;color:var(--gold-light);line-height:1.1}
+  .tstats span{color:#c9d5e4;font-size:14px}
+  .tgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+  .bars{display:flex;align-items:flex-end;gap:10px;height:180px;padding:10px 0 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .bars div{flex:1;background:linear-gradient(180deg,var(--gold),#a8842a);border-radius:6px 6px 0 0;position:relative;min-height:6px;transform-origin:bottom;transform:scaleY(0);transition:transform 1s ease}
+  .tsmc .show .bars div,.bars.show div{transform:scaleY(1)}
+  .bars div i{position:absolute;top:-22px;left:0;right:0;text-align:center;font-style:normal;font-size:13px;color:#fff}
+  .yrs{display:flex;gap:10px;margin-top:6px}.yrs span{flex:1;text-align:center;font-size:12px;color:#c9d5e4}
+  .tsmc h4{color:var(--gold-light);margin:0 0 12px;font-size:16px;letter-spacing:1px}
+  .fabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .fabs span{background:rgba(214,173,62,.15);border:1px solid rgba(214,173,62,.5);color:#fff;padding:5px 12px;border-radius:999px;font-size:14px;font-weight:600}
+  .tsvc{list-style:none;padding:0;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .tsvc li{background:rgba(255,255,255,.06);border-radius:10px;padding:10px 12px;font-size:14px;color:#e6edf6}
+  .recent{list-style:none;padding:0;margin:0}
+  .recent li{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.15);font-size:14.5px;color:#e6edf6}
+  .recent li em{font-style:normal;color:var(--gold-light);min-width:46px}
+  .tnote{color:#9fb0c5;font-size:12.5px;margin-top:18px}
+  .tmp{background:linear-gradient(135deg,#2a1f12,#4a3418)}
+  .tcat{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
+  .tcat>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px}
+  .tcat h3{margin:0 0 4px;color:#fff;font-size:19px;display:flex;justify-content:space-between;align-items:baseline}
+  .tcat h3 b{color:var(--gold-light);font-size:28px}
+  .tcat p{margin:0 0 10px;color:#c9d5e4;font-size:14px}
+  .tcat ul{margin:0;padding-left:18px;color:#e6edf6;font-size:14px;line-height:1.9}
+  @media (max-width:860px){.tcat{grid-template-columns:1fr}}
+  .tpc{background:linear-gradient(135deg,#0f2a2a,#1d4a4f)}
+  .subs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+  .subs span{background:rgba(255,255,255,.08);color:#e6edf6;padding:3px 9px;border-radius:6px;font-size:13px}
+  @media (max-width:860px){.tgrid{grid-template-columns:1fr}.tstats b{font-size:34px}.tsvc{grid-template-columns:1fr}}
+  /* line qr */
+  .qrbox{display:flex;gap:18px;align-items:center}
+  .contact .qrbox,.contact .qrbox div{background:none;box-shadow:none;padding:0;border-radius:0}
+  .qrbox img{width:112px;height:112px;border-radius:10px;border:6px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+  /* principal */
+  .principal{display:grid;grid-template-columns:460px 1fr;gap:60px;align-items:start}
+  .photo{position:relative;z-index:0}
+  .photo .frame{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;background:linear-gradient(160deg,#e9eef5,#cfd9e7);box-shadow:0 24px 60px rgba(20,35,58,.25)}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+  .photo .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:120px;font-weight:800;color:var(--navy)}
+  .photo::before{content:"";position:absolute;left:-20px;top:-20px;width:120px;height:120px;border:10px solid var(--gold);border-radius:50%;z-index:-1}
+  .photo::after{content:"";position:absolute;right:-22px;bottom:-22px;width:70%;height:60%;background:var(--navy);border-radius:24px;z-index:-1}
+  .nameplate{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(255,255,255,.95);border-radius:14px;padding:14px 18px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .nameplate b{font-size:26px;color:var(--navy-dark);letter-spacing:4px}
+  .nameplate span{display:block;color:var(--gold);font-weight:700;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 26px}
+  .chips span{background:var(--gold-soft);border:1px solid #efdfae;color:var(--navy-dark);padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600}
+  .prof h4{color:var(--navy-dark);font-size:17px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .prof h4::before{content:"";width:18px;height:3px;background:var(--gold)}
+  .prof ul{margin:0 0 24px;padding:0;list-style:none}
+  .prof li{color:var(--muted);font-size:15px;padding-left:20px;position:relative;margin:4px 0}
+  .prof li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .timeline{border-left:2px solid #dfe5ee;margin-left:6px;padding-left:22px}
+  .timeline div{position:relative;margin:0 0 12px;font-size:15px;color:var(--muted)}
+  .timeline div::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--navy)}
+  .timeline div.now::before{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 5px rgba(214,173,62,.25)}
+  .timeline b{color:var(--navy-dark)}
+  .timeline small{color:#8a96a5;margin-left:6px}
+  .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+  .member{background:#fff;border-radius:16px;padding:24px 12px;text-align:center;box-shadow:0 4px 16px rgba(20,35,58,.06);transition:transform .3s}
+  .member:hover{transform:translateY(-6px)}
+  .member .av{width:72px;height:72px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(145deg,var(--navy),var(--navy-dark));color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:700}
+  .member b{color:var(--navy-dark);font-size:17px;letter-spacing:2px}
+  .member small{display:block;color:var(--muted)}
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+  .values span{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-weight:700;color:var(--navy-dark);transition:all .3s}
+  .values span:hover{background:var(--navy);color:var(--gold-light);transform:translateY(-3px)}
+  @media (max-width:860px){.principal{grid-template-columns:1fr;gap:40px}.photo{max-width:380px;width:100%;margin:0 auto}.values{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:860px){
+    nav{display:none}
+    .hero .wrap,.about{grid-template-columns:1fr}
+    .rings{max-width:240px;order:-1;margin-top:90px}
+    .hero h1{font-size:36px}
+    .steps{grid-template-columns:1fr 1fr;row-gap:34px}
+    .steps::before{display:none}
+    section{padding:68px 0}
+    .person{flex-direction:column;text-align:center}
+    .person li{text-align:left}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.ring{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="mark.png" alt="建全工程顧問 標誌">建全工程顧問</a>
+    <nav>
+      <a href="#about">關於我們</a><a href="#services">服務項目</a><a href="#cases">實績案例</a><a href="#temp">假設工程</a><a href="#tsmc">半導體廠專區</a><a href="#tpc">台電專區</a><a href="#principal">負責人</a><a href="#team">團隊</a><a href="#contact">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="blueprint"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">SINCE 2010 ・ 民國 103 年成立公司</div>
+      <h1>為每一項工程的<br><span class="hl">結構安全</span>把關</h1>
+      <p class="en">Chien Chuan Engineering Consultant</p>
+      <p class="typer">專業服務：<b id="typed">結構安全評估</b></p>
+      <a class="btn btn-gold" href="#contact">立即諮詢</a><a class="btn btn-line" href="#services">了解服務</a>
+    </div>
+    <div class="rings" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <g class="spin"><circle class="orbit" cx="200" cy="200" r="190"/></g>
+        <path class="ring b" d="M232 98 A100 100 0 1 0 232 238"/>
+        <path class="ring g" d="M178 168 A100 100 0 1 1 178 308"/>
+      </svg>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL<span></span></div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="reveal">
+      <p class="kicker">ABOUT US</p>
+      <h2>關於建全</h2><div class="bar"></div>
+      <p class="lead">建全工程顧問有限公司成立於民國 103 年（2014 年），前身為「林建全土木結構技師事務所」（民國 99 年成立），是深耕土木與建築結構工程的專業顧問團隊。顧問公司不只是設計單位，更是連結業主與施工單位、推動案件順利前進的核心。</p>
+      <div class="motto"><span>專業領先</span><span>品質第一</span><span>安全至上</span><span>以人為本</span></div>
+      <p class="lead">我們以客觀的數據與嚴謹的分析，為業主、營造廠與設計單位提供可信賴的結構技術支援。從傳統土木結構到綠色能源與現代化工法，建全持續累積實務經驗，協助每一項工程安全、順利地完成。</p>
+      <p class="lead">我們以<b>預鑄工法</b>為未來發展主軸，推動更安全、經濟、環保且永續的建築型態，回應產業缺工缺料的挑戰。</p>
+      <div class="values"><span>預鑄工法</span><span>節省工期</span><span>降低成本</span><span>安全建築</span><span>以人為本</span><span>員工骨幹</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat reveal d1"><div class="num" data-count="16">0<small>年</small></div><p>自民國 99 年執業至今</p></div>
+      <div class="stat reveal d2"><div class="num" data-count="8">0<small>大</small></div><p>專業服務領域</p></div>
+      <div class="stat reveal d3"><div class="num" data-count="4">0<small>個</small></div><p>技師公會理監事職務</p></div>
+      <div class="stat reveal d4"><div class="num" data-count="6">0<small>人</small></div><p>專業工程團隊</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <p class="kicker reveal">OUR SERVICES</p>
+    <h2 class="reveal">服務項目</h2><div class="bar reveal"></div>
+    <div class="grid">
+      <div class="card reveal d1"><span class="no">01</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+        <h3>結構安全評估與補強</h3><p>既有建築物耐震詳細評估、結構安全檢討，並提出鋼板包覆、碳纖維、鋼構支撐等可施工、具經濟性的補強設計。</p></div>
+      <div class="card feature reveal d2"><span class="no">02</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="11" rx="1.5"/><path d="M8 14v4M16 14v4M3 21h18M6 18h3M15 18h3M8 7h8M8 10h5"/></svg></div>
+        <span class="badge">主力服務</span>
+        <h3>設備耐震與電業設備基礎</h3><p>科技廠房設備基座、電纜托架、管線支架與錨栓的耐震計算及技師簽證；變電所新增或汰換設備之樓板、梁承載檢討與補強設計。</p></div>
+      <div class="card reveal d3"><span class="no">03</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M8 10.5h5M10.5 8v5"/></svg></div>
+        <h3>鑑定服務</h3><p>建築結構安全鑑定、鄰房損壞鑑定、現況調查、擋土牆穩定性評估，並承辦法院委託之施工損鄰、建物傾斜沉陷鑑定。</p></div>
+      <div class="card reveal d4"><span class="no">04</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20v-4h16v4M7 16V9M12 16V6M17 16V9M2 12c3-3 5 3 10 0s7 3 10 0"/></svg></div>
+        <h3>地質敏感區調查與評估</h3><p>依作業準則辦理地下水補注、活動斷層、山崩地滑、地質遺跡等地質敏感區之基地調查與地質安全評估報告，協助送審。</p></div>
+      <div class="card reveal d1"><span class="no">05</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 21V4M19 21V4M5 8h14M5 13h14M5 18h14M5 8l14 5M19 8 5 13"/></svg></div>
+        <h3>營造廠技術協助</h3><p>施工架設計圖說、模板支撐系統設計、施工構台與擋土支撐、施工計畫書與交通維持計畫，成為營造廠穩健的技術後盾。</p></div>
+      <div class="card reveal d2"><span class="no">06</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><path d="M12 1v1M17 5h1M6 5h1M3 20l4-9h10l4 9zM9 11l-1.5 9M15 11l1.5 9M5 15.5h14"/></svg></div>
+        <h3>綠能：太陽能與儲能</h3><p>太陽能支架結構計算與簽證、儲能案場土木規劃，協助綠能案場安全落地。</p></div>
+      <div class="card reveal d3"><span class="no">07</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="8" height="8"/><rect x="13" y="12" width="8" height="8"/><rect x="8" y="3" width="8" height="8"/></svg></div>
+        <h3>預鑄工法（PC）結構設計</h3><p>以預鑄構件縮短工期、降低成本、提升品質，是建全未來發展的主軸。</p></div>
+      <div class="card reveal d4"><span class="no">08</span>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20c2-6 5-9 8-9s6 3 8 9M8 11l-2-5M16 11l2-5M12 11V4"/><circle cx="12" cy="4" r="1.5"/></svg></div>
+        <h3>裝置藝術結構設計</h3><p>協助藝術團隊進行結構建模、穩定性分析與安全檢核，讓創意作品在戶外穩固、安全地展出。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases" class="alt">
+  <div class="wrap">
+    <p class="kicker reveal">PROJECTS</p>
+    <h2 class="reveal">實績案例</h2><div class="bar reveal"></div>
+    <div class="tabs reveal">
+      <button class="on" data-f="art">裝置藝術結構</button><button data-f="ess">儲能案場</button><button data-f="pv">太陽光電案場</button><button data-f="appr">鑑定合作</button>
+    </div>
+    <div class="cases" data-group="art">
+      <div class="case reveal d1" data-cat="art"><div class="pic"><img src="cases/art1.jpg" alt="築巢計畫 VII 台灣野豬" loading="lazy"><span class="yr">2024</span></div>
+        <div class="body"><h3>築巢計畫 VII 台灣野豬</h3><div class="en">Nesting Plan VII Formosan Wild Boar</div><p>以竹材編構的大型戶外巢狀裝置，負責結構分析與穩定性檢核。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10225446790191059&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d2" data-cat="art"><div class="pic"><img src="cases/art2.jpg" alt="筌屋 IX 諾丁丘" loading="lazy"><span class="yr">2024</span></div>
+        <div class="body"><h3>筌屋 IX 諾丁丘</h3><div class="en">Fish Trap House IX Notting Hill</div><p>以傳統竹藤漁具為靈感的裝置，負責構件受力與安全檢核。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10225439969100536&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d3" data-cat="art"><div class="pic"><img src="cases/art3.jpg" alt="帆城・海安" loading="lazy"><span class="yr">2024</span></div>
+        <div class="body"><h3>帆城・海安</h3><div class="en">Sailing Castle Hai’an</div><p>多層帆形屋頂的燈光裝置，負責懸挑與抗風結構分析。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10224691438107729&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d4" data-cat="art"><div class="pic"><img src="cases/art4.jpg" alt="竹棚戲台" loading="lazy"><span class="yr">2024</span></div>
+        <div class="body"><h3>竹棚戲台</h3><div class="en">Bamboo Theatre</div><p>南投鹿谷小半天石馬公園的半開放竹構劇場，針對竹、木、金屬異材質接合與動態荷重進行結構評估。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10224119511689926&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d1" data-cat="art"><div class="pic"><img src="cases/art5.jpg" alt="眾神殿：鳳凰花" loading="lazy"><span class="yr">2024</span></div>
+        <div class="body"><h3>眾神殿：鳳凰花</h3><div class="en">Temple: Flame Tree</div><p>台灣燈會在台南・高鐵燈區。評估大型金屬與木構件懸挑穩定、燈節人流與戶外強風。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10224082795692049&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d2" data-cat="art"><div class="pic"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:20px;font-weight:700;letter-spacing:4px">筌屋 VIII</div><span class="yr">2023</span></div>
+        <div class="body"><h3>筌屋 VIII 金山</h3><div class="en">Fish Trap House VIII Jinshan</div><p>位於新北金山朱銘美術館，針對多重幾何切面與北海岸強風進行精密受力評估。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10223781057468782&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d3" data-cat="art"><div class="pic"><img src="cases/art7.jpg" alt="結構植物學 25AP-263-43" loading="lazy"><span class="yr">2025</span></div>
+        <div class="body"><h3>結構植物學 25AP-263-43</h3><div class="en">Structural Botany for Swiio Villa Yilan</div><p>宜蘭壯圍的植物造形裝置群，負責結構分析。</p><a class="more" href="https://www.facebook.com/story.php?story_fbid=10227761717022783&id=1664463101" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+      <div class="case reveal d4" data-cat="art"><div class="pic"><img src="cases/art8.jpg" alt="六本木帆城" loading="lazy"><span class="yr">2025</span></div>
+        <div class="body"><h3>六本木帆城</h3><div class="en">Sailing Castle: Roppongi</div><p>日本東京六本木藝術之夜・天祖神社，海外展出作品之結構分析。</p><a class="more" href="https://www.facebook.com/share/v/17CgYnkmvf/" target="_blank" rel="noopener">看作品照片 ↗</a></div></div>
+    </div>
+    <p class="credit" data-group="art">藝術家：范承宗｜結構分析：建全工程顧問｜作品照片版權屬原作者，點「看作品照片」可看完整相簿。</p>
+    <div class="feature-proj" data-group="ess" style="display:none">
+      <h3>龍井儲能案場</h3>
+      <p class="sub">民國 113–114 年・臺中龍井｜儲能貨櫃基礎與案場土木結構技術服務（空拍紀錄）</p>
+      <div class="gal"><a href="cases/longjing/lj1.jpg" class="lbl"><img src="cases/longjing/lj1.jpg" alt="龍井儲能案場 完工全景" loading="lazy"><span>完工全景</span></a><a href="cases/longjing/lj2.jpg" class="lbl"><img src="cases/longjing/lj2.jpg" alt="龍井儲能案場 俯視配置" loading="lazy"><span>俯視配置</span></a><a href="cases/longjing/lj3.jpg" class="lbl"><img src="cases/longjing/lj3.jpg" alt="龍井儲能案場 屋頂型光電與儲能" loading="lazy"><span>屋頂型光電與儲能</span></a><a href="cases/longjing/lj4.jpg" class="lbl"><img src="cases/longjing/lj4.jpg" alt="龍井儲能案場 貨櫃進場" loading="lazy"><span>貨櫃進場</span></a><a href="cases/longjing/lj5.jpg" class="lbl"><img src="cases/longjing/lj5.jpg" alt="龍井儲能案場 設備吊裝" loading="lazy"><span>設備吊裝</span></a><a href="cases/longjing/lj6.jpg" class="lbl"><img src="cases/longjing/lj6.jpg" alt="龍井儲能案場 黃昏施工" loading="lazy"><span>黃昏施工</span></a></div>
+    </div>
+    <div class="mini" data-group="ess" style="display:none">
+      <div><b>儲能昇壓站</b><em>民國 112 年</em><p>儲能系統昇壓站結構設計</p></div>
+      <div><b>埔里儲能案場</b><em>民國 113–115 年</em><p>南投埔里・儲能案場規劃與使用執照協助</p></div>
+      <div><b>基隆儲能案場</b><em>民國 113 年</em><p>基隆・儲能案場土木結構技術服務</p></div>
+      <div><b>學甲心忠升壓站</b><em>民國 114 年</em><p>臺南學甲・儲能系統升壓站結構設計</p></div>
+      <div><b>中正大學儲能案場</b><em>民國 114 年</em><p>嘉義・校園儲能系統結構技術服務</p></div>
+    </div>
+    <div class="mini" data-group="pv" style="display:none">
+      <div><b>金門酒廠太陽能支撐架</b><em>民國 111 年</em><p>金門・酒廠太陽能支撐架結構設計</p></div>
+      <div><b>大彎太陽光電</b><em>民國 112 年</em><p>太陽光電案場支架結構</p></div>
+      <div><b>大潭電廠太陽能支撐架</b><em>民國 112 年</em><p>桃園・大潭電廠太陽能支撐架結構設計</p></div>
+      <div><b>台電太陽光電工程（第二期）</b><em>民國 113–114 年</em><p>台電再生能源處委託・設置建物結構評估，以及公學等案場太陽能支撐架結構設計</p></div>
+      <div><b>汀州路太陽能支撐架</b><em>民國 113 年</em><p>臺北・汀州路太陽能支撐架結構設計</p></div>
+      <div><b>太陽能支架結構簽證</b><em>民國 115 年</em><p>各式太陽能支架結構計算與技師簽證</p></div>
+      <div><b>大林電廠太陽能支撐架</b><em>民國 115 年</em><p>高雄・大林電廠太陽能支撐架結構設計</p></div>
+    </div>
+    <div class="mini" data-group="appr" style="display:none">
+      <div><b>由鉅建設</b><em>合作夥伴</em><p>提供建案施工前後之鄰房現況鑑定與工程技術支援，建立建設單位與住戶的信賴依據。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="temp" class="tsmc tmp">
+  <div class="wrap">
+    <p class="kicker reveal">TEMPORARY WORKS</p>
+    <h2 class="reveal">假設工程專區</h2><div class="bar reveal"></div>
+    <p class="lead reveal">施工期間的安全，從假設工程開始。我們為營造廠提供擋土支撐、施工構台、施工架與模板支撐的結構計算、設計圖說與技師簽證，協助施工計畫順利送審、現場安全施作。</p>
+    <div class="tstats">
+      <div class="reveal d1"><b data-count="113">0</b><span>件假設工程案件</span></div>
+      <div class="reveal d2"><b data-count="4">0</b><span>大類：擋土・構台・施工架・模板</span></div>
+      <div class="reveal d3"><b data-count="7">0</b><span>年持續服務（109–115）</span></div>
+    </div>
+    <div class="reveal">
+      <h4>歷年案件數（民國年）</h4>
+      <div class="bars"><div style="height:58%;transition-delay:0.00s"><i>15</i></div><div style="height:96%;transition-delay:0.08s"><i>25</i></div><div style="height:100%;transition-delay:0.16s"><i>26</i></div><div style="height:31%;transition-delay:0.24s"><i>8</i></div><div style="height:31%;transition-delay:0.32s"><i>8</i></div><div style="height:38%;transition-delay:0.40s"><i>10</i></div><div style="height:81%;transition-delay:0.48s"><i>21</i></div></div>
+      <div class="yrs"><span>109</span><span>110</span><span>111</span><span>112</span><span>113</span><span>114</span><span>115</span></div>
+    </div>
+    <div class="tcat"><div class="reveal d1"><h3>施工構台<b>31<small style="font-size:14px;color:#c9d5e4"> 件</small></b></h3><p>地下室開挖、廠房與河川工程的施工構台、運貨構台、便橋結構計算</p><ul><li>台中市南區大慶段、三民路、豐原施工構台</li><li>霧社台 14 線構台、龜重溪施工構台及便橋</li><li>科技廠、汽車廠、量販廠房施工構台</li><li>吊車作業構台、集塵設備機坑構台</li></ul></div><div class="reveal d2"><h3>擋土支撐<b>22<small style="font-size:14px;color:#c9d5e4"> 件</small></b></h3><p>開挖擋土、推進工作井臨時支撐與鋼襯板、排樁檢討</p><ul><li>捷運工程擋土、鳳山污水擋土支撐</li><li>推進工法發進井、到達井、工作井臨時支撐</li><li>台中－雲林送水管擋土結構計算</li><li>市政路鋼襯板、筒形擋土支撐、鋼管擋土</li></ul></div><div class="reveal d3"><h3>施工架<b>36<small style="font-size:14px;color:#c9d5e4"> 件</small></b></h3><p>電廠、水庫、橋梁、學校與廠房施工架計算書</p><ul><li>台中火力電廠、變電所施工架</li><li>南化水庫清淤施工架</li><li>烏溪一號橋移動式、中二橋懸吊式施工架</li><li>國中小校舍、車站、長照機構施工架</li></ul></div><div class="reveal d4"><h3>模板支撐<b>24<small style="font-size:14px;color:#c9d5e4"> 件</small></b></h3><p>橋梁、匝道、變電所樓板與大型模板支撐系統</p><ul><li>草湖交流道 B、D 匝道支撐架</li><li>台北捷運支撐架、新武界模板支撐</li><li>變電所樓板支撐、垂直支撐（塗城、觀音、瑞峰）</li><li>直井模板、樹林橋支撐、各式模板計算</li></ul></div></div>
+    <p class="tnote">依本公司 NAS 案件資料夾統計（不含永久性擋土牆鑑定與評估案）。</p>
+  </div>
+</section>
+
+<section id="tsmc" class="tsmc">
+  <div class="wrap">
+    <p class="kicker reveal">SEMICONDUCTOR PROJECTS</p>
+    <h2 class="reveal">半導體廠專區</h2><div class="bar reveal"></div>
+    <p class="lead reveal">民國 108 年起，持續協助機電、設備與營造協力廠商，完成國內半導體大廠各廠區的設備耐震、支撐結構與施工平台計算及技師簽證，廠區遍及新竹、台中、台南、高雄、嘉義。</p>
+    <div class="tstats">
+      <div class="reveal d1"><b data-count="81">0</b><span>件半導體廠相關案件</span></div>
+      <div class="reveal d2"><b data-count="12">0</b><span>座晶圓廠與封測廠區</span></div>
+      <div class="reveal d3"><b data-count="8">0</b><span>年持續服務（108–115）</span></div>
+    </div>
+    <div class="tgrid">
+      <div class="reveal">
+        <h4>歷年案件數（民國年）</h4>
+        <div class="bars"><div style="height:4%;transition-delay:0.00s"><i>1</i></div><div style="height:50%;transition-delay:0.08s"><i>12</i></div><div style="height:46%;transition-delay:0.16s"><i>11</i></div><div style="height:50%;transition-delay:0.24s"><i>12</i></div><div style="height:17%;transition-delay:0.32s"><i>4</i></div><div style="height:33%;transition-delay:0.40s"><i>8</i></div><div style="height:38%;transition-delay:0.48s"><i>9</i></div><div style="height:100%;transition-delay:0.56s"><i>24</i></div></div>
+        <div class="yrs"><span>108</span><span>109</span><span>110</span><span>111</span><span>112</span><span>113</span><span>114</span><span>115</span></div>
+      </div>
+      <div class="reveal d2">
+        <h4>服務項目</h4>
+        <ul class="tsvc">
+          <li>電纜托架（Cable tray）支撐計算</li><li>變壓器、設備搬運平台</li>
+          <li>設備固定座、耐震腳座</li><li>變壓器與設備基礎螺栓</li>
+          <li>NGR、盤箱體、CUP 結構</li><li>FRP 構造物檢討</li>
+        </ul>
+        <h4>近期案例（115 年）</h4>
+        <ul class="recent">
+          <li><em>平台</em>變壓器搬運平台、施工平台結構計算</li>
+          <li><em>設備</em>半導體設備固定座、耐震腳座結構計算</li>
+          <li><em>托架</em>電纜托架（Cable tray）、電纜支撐架</li>
+          <li><em>基礎</em>變壓器與設備基礎螺栓檢核</li>
+          <li><em>盤箱</em>CUP 盤箱體、FBF／FBG 結構計算</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tnote">依本公司 NAS 案件資料夾統計（含協力廠商委託案件）。</p>
+  </div>
+</section>
+
+<section id="tpc" class="tsmc tpc">
+  <div class="wrap">
+    <p class="kicker reveal">TAIPOWER PROJECTS</p>
+    <h2 class="reveal">台電專區</h2><div class="bar reveal"></div>
+    <p class="lead reveal">民國 108 年起，協助台電及機電協力廠商完成全台變電所、電廠的結構安全檢討與補強設計，涵蓋設備汰換的樓板與梁承載、設備基礎、施工架，以及台電建物公共安全檢查與太陽光電設置評估。</p>
+    <div class="tstats">
+      <div class="reveal d1"><b data-count="113">0</b><span>件台電相關案件</span></div>
+      <div class="reveal d2"><b data-count="52">0</b><span>座變電所</span></div>
+      <div class="reveal d3"><b data-count="7">0</b><span>座電廠</span></div>
+    </div>
+    <div class="tgrid">
+      <div class="reveal">
+        <h4>歷年案件數（民國年）</h4>
+        <div class="bars"><div style="height:38%;transition-delay:0.00s"><i>8</i></div><div style="height:33%;transition-delay:0.08s"><i>7</i></div><div style="height:62%;transition-delay:0.16s"><i>13</i></div><div style="height:86%;transition-delay:0.24s"><i>18</i></div><div style="height:71%;transition-delay:0.32s"><i>15</i></div><div style="height:100%;transition-delay:0.40s"><i>21</i></div><div style="height:95%;transition-delay:0.48s"><i>20</i></div><div style="height:52%;transition-delay:0.56s"><i>11</i></div></div>
+        <div class="yrs"><span>108</span><span>109</span><span>110</span><span>111</span><span>112</span><span>113</span><span>114</span><span>115</span></div>
+        <h4 style="margin-top:26px">服務過的變電所</h4>
+        <div class="subs"><span>中市</span><span>中華</span><span>二重</span><span>五股</span><span>健康</span><span>八連</span><span>南投</span><span>南湖</span><span>台西</span><span>同盟</span><span>土庫</span><span>塗城</span><span>大城</span><span>大寮</span><span>宋屋</span><span>屏東</span><span>峨嵋</span><span>建國</span><span>彰化</span><span>彰新</span><span>新竹</span><span>東學</span><span>林園</span><span>梅湖</span><span>榮成</span><span>榮星</span><span>樹安</span><span>水林</span><span>江翠</span><span>沙鹿</span><span>潭後</span><span>灰磘</span><span>瑞峰</span><span>福工</span><span>福德</span><span>福興</span><span>翁子</span><span>臥龍</span><span>興仁</span><span>草屯</span><span>草港</span><span>蘭雅</span><span>虎林</span><span>西湖</span><span>觀音</span><span>路園</span><span>重安</span><span>青溪</span><span>鹿東</span><span>黎明</span><span>龍井</span><span>彰林</span></div>
+      </div>
+      <div class="reveal d2">
+        <h4>服務過的電廠</h4>
+        <div class="fabs"><span>台中火力</span><span>大潭</span><span>興達</span><span>大林</span><span>明潭</span><span>大觀</span><span>莒光</span></div>
+        <h4>服務項目</h4>
+        <ul class="tsvc">
+          <li>變電所設備汰換樓板、梁承載檢討</li><li>碳纖維、鋼板、增設鋼梁補強設計</li>
+          <li>變壓器、配電盤設備基礎與基礎螺栓</li><li>施工架、樓板支撐、設備平台</li>
+          <li>電廠設備、纜溝與深水池評估</li><li>台電建物公共安全檢查申報</li>
+          <li>太陽光電設置建物結構評估</li><li>設施損壞修復評估</li>
+        </ul>
+        <h4>近期案例</h4>
+        <ul class="recent">
+          <li><em>115</em>西湖、黎明、林園變電所樓板結構檢討；峨嵋變電所</li>
+          <li><em>115</em>大林電廠深水池評估、明潭及大觀電廠太陽光電</li>
+          <li><em>114</em>觀音變電所樓板支撐；宋屋、鹿東、草港、福興變電所</li>
+          <li><em>114</em>榮成、潭後、中華、青溪變電所；太陽光電二期建物評估</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tnote">依本公司 NAS 案件資料夾統計（含協力廠商委託案件）。</p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <p class="kicker reveal">HOW WE WORK</p>
+    <h2 class="reveal">服務流程</h2><div class="bar reveal"></div>
+    <div class="steps">
+      <div class="step reveal d1"><div class="dot">1</div><h4>需求諮詢</h4><p>了解工程內容、提供圖說與資料</p></div>
+      <div class="step reveal d2"><div class="dot">2</div><h4>評估報價</h4><p>確認工作範圍與時程，提出報價</p></div>
+      <div class="step reveal d3"><div class="dot">3</div><h4>現勘與分析</h4><p>現場勘查、結構計算與檢討</p></div>
+      <div class="step reveal d4"><div class="dot">4</div><h4>報告與簽證</h4><p>提交計算書／報告，技師簽證</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="kicker reveal">WHY CHIEN CHUAN</p>
+    <h2 class="reveal">為什麼選擇建全</h2><div class="bar reveal"></div>
+    <div class="why">
+      <div class="reveal d1"><b>技師親自把關</b><span>由執業結構技師主導分析與簽證。</span></div>
+      <div class="reveal d2"><b>實務導向</b><span>設計考量現場可施工性，不只是紙上計算。</span></div>
+      <div class="reveal d3"><b>跨領域整合</b><span>結構、土木、地質、綠能一次處理。</span></div>
+      <div class="reveal d4"><b>深耕 16 年</b><span>民國 99 年執業至今，累積豐富實務案例。</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="principal">
+  <div class="wrap">
+    <p class="kicker reveal">PRINCIPAL ENGINEER</p>
+    <h2 class="reveal">負責人</h2><div class="bar reveal"></div>
+    <div class="principal">
+      <div class="photo reveal">
+        <div class="frame">
+          <div class="fallback">林</div>
+          <img src="photo.jpg" alt="林建全 結構技師／土木技師" onerror="this.remove()">
+          <div class="nameplate"><b>林建全</b><span>結構技師／土木技師</span></div>
+        </div>
+      </div>
+      <div class="prof reveal d2">
+        <div class="chips"><span>RC 結構分析</span><span>鋼構結構分析</span><span>耐震詳細評估</span><span>安全鑑定與評估</span><span>結構設備分析與基礎設計</span></div>
+        <h4>現職</h4>
+        <ul>
+          <li>建全工程顧問有限公司 負責人</li>
+          <li>中華民國結構工程技師公會全國聯合會 理事</li>
+          <li>臺灣省結構工程技師公會 常務理事</li>
+          <li>臺中市結構工程技師公會 常務理事</li>
+          <li>臺中市土木技師公會 常務理事</li>
+        </ul>
+        <h4>學歷</h4>
+        <ul>
+          <li>國立成功大學 土木工程學系 土木研究所 畢業</li>
+          <li>國立成功大學 土木工程學系 畢業</li>
+          <li>國立臺中第一高級中學 畢業</li>
+        </ul>
+        <h4>經歷</h4>
+        <div class="timeline">
+          <div><b>國家地震工程研究中心</b> 助理研究員<small>90–94</small></div>
+          <div><b>上華、黎明工程顧問</b><small>94</small></div>
+          <div><b>駿宏工程顧問</b> 經理<small>96–99</small></div>
+          <div><b>圳德工程顧問</b> 執業技師<small>99</small></div>
+          <div><b>林建全土木結構技師事務所</b> 負責人<small>99–101</small></div>
+          <div><b>上華工程顧問</b> 負責人<small>101–105</small></div>
+          <div class="now"><b>建全工程顧問有限公司</b> 負責人<small>105–今</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="alt">
+  <div class="wrap">
+    <p class="kicker reveal">OUR TEAM</p>
+    <h2 class="reveal">公司團隊</h2><div class="bar reveal"></div>
+    <div class="team">
+      <div class="member reveal d1"><div class="av">林</div><b>林建全</b><small>負責人・執業技師</small></div>
+      <div class="member reveal d2"><div class="av">胡</div><b>胡宇承</b><small>執業技師</small></div>
+      <div class="member reveal d3"><div class="av">陳</div><b>陳彥丞</b><small>設計部經理</small></div>
+      <div class="member reveal d4"><div class="av">賴</div><b>賴致群</b><small>資深工程師</small></div>
+      <div class="member reveal d1"><div class="av">楊</div><b>楊力宇</b><small>資深工程師</small></div>
+      <div class="member reveal d2"><div class="av">張</div><b>張晏慈</b><small>行政總監</small></div>
+    </div>
+  </div>
+</section>
+
+
+<div class="cta">
+  <div class="wrap reveal">
+    <h2>有結構安全的問題嗎？</h2>
+    <p>設備耐震簽證、結構評估、鑑定與設計，歡迎來電或來信洽詢。</p>
+    <a class="btn btn-gold" href="tel:0915620080">撥打 0915-620080</a><a class="btn btn-line" href="mailto:macolin.tw@gmail.com">寄信給我們</a>
+  </div>
+</div>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <p class="kicker reveal">CONTACT</p>
+    <h2 class="reveal">聯絡我們</h2><div class="bar reveal"></div>
+    <div class="contact">
+      <a class="reveal d1" href="tel:049-2351288"><small>電話</small><b>049-2351288</b></a>
+      <a class="reveal d2" href="tel:0915620080"><small>手機</small><b>0915-620080</b></a>
+      <a class="reveal d3" href="mailto:macolin.tw@gmail.com"><small>EMAIL</small><b>macolin.tw@gmail.com</b></a>
+      <a class="reveal d4" href="https://line.me/ti/p/mrhTtj27iV"><div class="qrbox"><img src="line_qr.jpg" alt="LINE QR Code"><div><small>LINE 掃碼加好友</small><b>0915620080</b></div></div></a>
+      <div class="reveal d1"><small>地址</small><b>南投縣草屯鎮正言街17巷34弄11號</b></div>
+      <div class="reveal d2"><small>統一編號</small><b>54754906</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>© 建全工程顧問有限公司 Chien Chuan Engineering Consultant</footer>
+<a class="totop" id="totop" href="#top" aria-label="回到頂端">↑</a>
+
+<script>
+  // header 變色、回頂端按鈕
+  const hdr=document.getElementById('hdr'), totop=document.getElementById('totop');
+  const onScroll=()=>{const y=window.scrollY;hdr.classList.toggle('solid',y>40);totop.classList.toggle('show',y>600)};
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // 捲動淡入＋數字跳動
+  const countUp=el=>{const t=+el.dataset.count,q=el.querySelector('small'),sm=q?q.outerHTML:'';let n=0;const step=()=>{n++;el.innerHTML=n+sm;if(n<t)setTimeout(step,Math.max(8,900/t))};step()};
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show'); e.target.querySelectorAll('.bars').forEach(b=>b.classList.add('show'));
+    e.target.querySelectorAll('[data-count]').forEach(countUp);io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // 案例分類
+  document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+    document.querySelectorAll('[data-group]').forEach(g=>g.style.display=g.dataset.group===b.dataset.f?'':'none');
+    document.querySelectorAll('[data-group="'+b.dataset.f+'"] .reveal').forEach(e=>e.classList.add('show'));
+  }));
+
+  // 打字效果
+  const words=['結構安全評估','設備耐震簽證','法院委託鑑定','地質敏感區評估','施工架與構台設計','太陽能支架計算','預鑄工法設計','裝置藝術結構'];
+  const el=document.getElementById('typed');let wi=0,ci=words[0].length,del=true;
+  (function tick(){const w=words[wi];
+    if(del){ci--;if(ci<=0){del=false;wi=(wi+1)%words.length}}
+    else{ci++;if(ci>=words[wi].length){del=true;el.textContent=words[wi];return setTimeout(tick,1800)}}
+    el.textContent=words[wi].slice(0,Math.max(ci,0))||' ';setTimeout(tick,del?60:120)})();
+</script>
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+  const lb=document.getElementById("lb");
+  document.querySelectorAll(".lbl").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();lb.querySelector("img").src=a.getAttribute("href");lb.classList.add("on")}));
+  lb.addEventListener("click",()=>lb.classList.remove("on"));
+</script>
+</body>
+</html>
